@@ -14,7 +14,6 @@ namespace MVCapp.Middleware
         private readonly RequestDelegate _next;
         private readonly ILogRepository _repo;
 
-
         public LoggingMiddleware(RequestDelegate next, ILogRepository repo)
         {
             _next = next;
@@ -32,7 +31,6 @@ namespace MVCapp.Middleware
         public void LogConsole(HttpContext context)
         {
             Console.WriteLine($@"[{DateTime.Now}]:New request to http:\\{context.Request.Host.Value + context.Request.Path}");
-
         }
         public async Task AddLogInDB(HttpContext context)
         {

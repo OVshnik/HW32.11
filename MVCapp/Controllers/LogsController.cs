@@ -7,6 +7,8 @@ namespace MVCapp.Controllers
 {
 	public class LogsController:Controller
 	{
+		
+
 		private readonly ILogRepository _repo;
 
 		public LogsController(ILogRepository repo)
